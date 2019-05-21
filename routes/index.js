@@ -1,4 +1,4 @@
-const { getAllBurgers, addABurger, devourABurger } = require('../controller/burgers_controller.js')
+const { getAllBurgers, addABurger, devourABurger, adminBurgers, adminRemoveBurger } = require('../controller/burgers_controller.js')
 
 module.exports = app => {
   // your routes here...
@@ -12,5 +12,13 @@ module.exports = app => {
   // devour a burger
   app.put('/burgers/:id', (req, res) => {
     devourABurger(req, res, req.params.id)
+  })
+  // admin 
+  app.get('/burgers/admin', (req, res) => {
+    adminBurgers(res)
+  })
+  // admin remove
+  app.delete('/burgers/admin/:id', (req, res) => {
+    adminRemoveBurger(req, res, req.params.id)
   })
 }
