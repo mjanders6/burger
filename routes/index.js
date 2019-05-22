@@ -2,7 +2,7 @@ const { getAllBurgers, addABurger, devourABurger, adminBurgers, adminRemoveBurge
 
 module.exports = app => {  
   // your routes here...
-  app.get('/burgers', (req, res) => {
+  app.get('/', (req, res) => {
     getAllBurgers(res)
   })
   // add a new burger
