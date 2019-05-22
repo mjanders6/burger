@@ -1,8 +1,7 @@
-require('dotenv').config()
 const { createConnection } = require('mysql2')
-const connection
+var connection
 
-if (process.env.JAWSDB_ULR) {
+if (process.env.JAWSDB_ULR && process.env.NODE_ENV == 'production') {
   connection = createConnection(process.env.JAWSDB_ULR)
 } else {
   connection = createConnection({
@@ -14,6 +13,6 @@ if (process.env.JAWSDB_ULR) {
   })
 }
 
-connection.connect()
+// connection.connect()
 module.exports = connection
 
