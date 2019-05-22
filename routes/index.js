@@ -1,6 +1,11 @@
 const { getAllBurgers, addABurger, devourABurger, adminBurgers, adminRemoveBurger } = require('../controller/burgers_controller.js')
 
 module.exports = app => {
+  // for heroku
+  app.get("/", function(req, res) {
+    res.json(path.join(__dirname, "public/index.html"));
+  });
+  
   // your routes here...
   app.get('/burgers', (req, res) => {
     getAllBurgers(res)
