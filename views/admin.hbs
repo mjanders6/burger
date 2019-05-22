@@ -3,28 +3,12 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-5 col-left">
             <table>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <tr>
-                    <td>{{id}} {{burger_name}}</td>
-                    <td><button id='devourBurger' type="button" class="btn bg-gradient-secondary btn-primary btn-sm"
-                            data-id='{{id}}'>Devour Me!</button></td>
-                </tr>
-                {{/unless}}
-                {{/each}}
+                {{> page/food}}
             </table>
         </div>
         <div class="col-sm-5 col-right">
             <table>
-                {{#each burgers}}
-                {{#if devoured}}
-                <tr>
-                    <td>{{id}} {{burger_name}}</td>
-                    <td><button id='removeBurger' type="button" class="btn bg-gradient-secondary btn-primary btn-sm"
-                            data-id='{{id}}'>Remove Me!</button></td>
-                </tr>
-                {{/if}}
-                {{/each}}
+                {{> page/adminDelete}}
             </table>
         </div>
         <div class="col-sm-1"></div>

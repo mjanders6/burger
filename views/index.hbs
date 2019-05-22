@@ -4,26 +4,12 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-4 col-left">
             <table>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <tr>
-                    <td>{{id}} {{burger_name}}</td>
-                    <td><button id='devourBurger' type="button" class="btn bg-gradient-secondary btn-primary btn-sm"
-                            data-id='{{id}}'>Devour Me!</button></td>
-                </tr>
-                {{/unless}}
-                {{/each}}
+                {{> page/food}}
             </table>
         </div>
         <div class="col-sm-4 col-right">
-            <table>
-                {{#each burgers}}
-                {{#if devoured}}
-                <tr>
-                    <td>{{id}} {{burger_name}}</td>
-                </tr>
-                {{/if}}
-                {{/each}}
+            <table>    
+                {{> page/devourFood}}
             </table>
         </div>
         <div class="col-sm-2"></div>

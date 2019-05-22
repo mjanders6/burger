@@ -1,0 +1,9 @@
+                {{#each burgers}}
+                {{#if devoured}}
+                <tr>
+                    <td>{{id}} {{burger_name}}</td>
+                    <td><button id='removeBurger' type="button" class="btn bg-gradient-secondary btn-primary btn-sm"
+                            data-id='{{id}}'>Remove Me!</button></td>
+                </tr>
+                {{/if}}
+                {{/each}}

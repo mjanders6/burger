@@ -1,0 +1,9 @@
+                {{#each burgers}}
+                {{#unless devoured}}
+                <tr>
+                    <td>{{id}} {{burger_name}}</td>
+                    <td><button id='devourBurger' type="button" class="btn bg-gradient-secondary btn-primary btn-sm"
+                            data-id='{{id}}'>Devour Me!</button></td>
+                </tr>
+                {{/unless}}
+                {{/each}}
