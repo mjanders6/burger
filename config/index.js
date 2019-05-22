@@ -1,8 +1,8 @@
 const { createConnection } = require('mysql2')
 var connection
 
-if (process.env.JAWSDB_ULR && process.env.NODE_ENV === 'production') {
-  connection = createConnection(process.env.JAWSDB_ULR)
+if (process.env.JAWSDB_URL && process.env.NODE_ENV === 'production') {
+  connection = createConnection(process.env.JAWSDB_URL)
 } else {
   connection = createConnection({
     host: 'localhost',
